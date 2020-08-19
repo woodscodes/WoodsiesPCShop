@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WoodsiesPCShop.Core\WoodsiesPCShop.Core.csproj" />
+  </ItemGroup>
+
 </Project>

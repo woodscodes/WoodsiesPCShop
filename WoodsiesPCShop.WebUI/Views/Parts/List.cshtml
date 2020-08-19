@@ -1,0 +1,29 @@
+﻿@model PartViewModel
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
+<div class="row">
+    @foreach (var part in Model.Parts)
+    {
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="~/img/@(part.Img)">
+            <div class="card-body">
+                <h5 class="card-title">@(part.Manufacturer)</h5>
+                <h4 class="card-title">@(part.Model)</h4>
+                <p class="card-text">@(part.Description)</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">@(part.Price)</li>
+                <li class="list-group-item">@(part.CategoryId) would normally be category</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Go to product page</a>
+                <a href="#" class="card-link">Buy</a>
+            </div>
+        </div>
+    }
+</div>
